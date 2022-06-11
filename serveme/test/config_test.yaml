@@ -1,8 +1,0 @@
-port: 31337
-
-debug: true
-debug_log: test/debug_test.log
-error_log: test/error_test.log
-
-modules:
-   - test

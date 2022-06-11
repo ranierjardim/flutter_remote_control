@@ -18,8 +18,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  web_socket_channel: 2.2.0
-  websocket_manager: ^0.2.2
   remote_control:
     # When depending on this package from a real application you should use:
     #   remote_control: ^x.y.z

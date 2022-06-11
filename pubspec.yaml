@@ -12,9 +12,9 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  web_socket_channel: 2.2.0
-  serveme:
-    path: serveme
+  remote_control_core:
+    path: core/
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

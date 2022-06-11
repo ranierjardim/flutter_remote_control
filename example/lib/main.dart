@@ -1,86 +1,97 @@
 import 'package:flutter/material.dart';
-import 'package:remote_control/remote_control.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
-import 'package:websocket_manager/websocket_manager.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  List<String> texts = [];
-  final ScrollController _controller = ScrollController();
-  WebSocketChannel? channel;
-
-  @override
-  void initState() {
-    super.initState();
+  Widget build(BuildContext context) {
+    const title = 'WebSocket Demo';
+    return const MaterialApp(
+      title: title,
+      home: MyHomePage(
+        title: title,
+      ),
+    );
   }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({
+    required this.title,
+  });
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final TextEditingController _controller = TextEditingController();
+
+  WebSocketChannel _channel = WebSocketChannel.connect(
+    Uri.parse('ws://192.168.31.203:3000'),
+  );
+
+  //Uri.parse('wss://echo.websocket.events'),
+  //Uri.parse('ws://192.168.31.203:3000'),
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> conteudo = texts
-        .map((e) => Text(
-              'Comando: $e\n',
-              style: const TextStyle(backgroundColor: Colors.white),
-            ))
-        .toList();
-
-    final button = MaterialButton(
-      child: Text('Connect'),
-      color: Colors.blue,
-      onPressed: () async {
-        texts.clear();
-        final addr = 'wss://echo.websocket.org';
-        texts.add('Iniciando... $addr');
-        setState(() {});
-        //ws://127.0.0.1:9001
-        channel!.sink.add("taporra");
-        texts.add('Iniciado...');
-        texts.add('Iniciando... $addr');
-        int messageNum = 0;
-        final socket = WebsocketManager(addr);
-        socket.onClose((dynamic message) {
-          print('close');
-        });
-        socket.onMessage((dynamic message) {
-          print('recv: $message');
-          if (messageNum == 10) {
-            socket.close();
-          } else {
-            messageNum += 1;
-            final String msg = '$messageNum: ${DateTime.now()}';
-            print('send: $msg');
-            socket.send(msg);
-          }
-        });
-        await socket.connect();
-        socket.send('porra');
-        texts.add('Iniciado...');
-        setState(() {});
-        _controller.animateTo(
-          _controller.position.maxScrollExtent,
-          duration: const Duration(seconds: 1),
-          curve: Curves.fastOutSlowIn,
-        );
-      },
-    );
-
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: ListView(controller: _controller, children: conteudo),
-        floatingActionButton: button,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Form(
+              child: TextFormField(
+                controller: _controller,
+                decoration: const InputDecoration(labelText: 'Send a message'),
+              ),
+            ),
+            const SizedBox(height: 24),
+            StreamBuilder(
+              stream: _channel.stream,
+              builder: (context, snapshot) {
+                return Text(snapshot.hasData ? '${snapshot.data}' : '');
+              },
+            ),
+            MaterialButton(
+                child: Text('Reconectar'),
+                color: Colors.blue,
+                onPressed: () {
+                  print('reconectando');
+                  _channel = WebSocketChannel.connect(
+                    Uri.parse('ws://192.168.31.203:4678'),
+                  );
+                  setState(() {});
+                })
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _sendMessage,
+        tooltip: 'Send message',
+        child: const Icon(Icons.send),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  void _sendMessage() {
+    if (_controller.text.isNotEmpty) {
+      _channel.sink.add(_controller.text);
+    }
+  }
+
+  @override
+  void dispose() {
+    _channel.sink.close();
+    _controller.dispose();
+    super.dispose();
   }
 }
