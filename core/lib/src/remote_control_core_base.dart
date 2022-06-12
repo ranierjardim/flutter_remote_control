@@ -42,9 +42,6 @@ class RemoteControlCore {
       );
       channel.sink.add("taporra");
     }
-    if(_debug){
-      print('test');
-    }
     yield StartedServiceState();
   }
 
