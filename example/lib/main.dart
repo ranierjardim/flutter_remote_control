@@ -34,9 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
     Uri.parse('ws://192.168.31.203:3000'),
   );
 
-  //Uri.parse('wss://echo.websocket.events'),
-  //Uri.parse('ws://192.168.31.203:3000'),
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
