@@ -13,7 +13,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   remote_control_core:
-    path: core/
+    path: core
 
 dev_dependencies:
   flutter_test:

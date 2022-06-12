@@ -17,7 +17,7 @@ class ServerConfig implements ConnectionConfig {
   @override
   int port;
 
-  ServerConfig({this.port = 3000});
+  ServerConfig({this.port = 4678});
 }
 
 class ClientConfig implements ConnectionConfig {
@@ -27,7 +27,7 @@ class ClientConfig implements ConnectionConfig {
   @override
   int port;
 
-  ClientConfig({this.port = 3000});
+  ClientConfig({this.port = 4678});
 }
 
 abstract class RegisterConfig {

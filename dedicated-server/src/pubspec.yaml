@@ -2,13 +2,14 @@ name: remote_control_dedicated_server
 description: A sample command-line application.
 version: 1.0.0
 # homepage: https://www.example.com
+publish_to: 'none'
 
 environment:
   sdk: '>=2.17.1 <3.0.0'
 
 dependencies:
   remote_control_core:
-    path: core
+    path: ../../core
 
 dev_dependencies:
   lints: ^2.0.0

@@ -1,0 +1,3 @@
+make build
+docker tag ranierjardim/flutter_remote_control_dedicated_server:local_build flutter_remote_control_dedicated_server:${CURRENT_VERSION}
+docker push ranierjardim/flutter_remote_control_dedicated_server:${CURRENT_VERSION}
