@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   print('reconectando');
                   _channel = WebSocketChannel.connect(
-                    Uri.parse('ws://127.0.0.1:4678'),
+                    Uri.parse('ws://192.168.1.190:4678'),
                   );
                   setState(() {});
                 },)

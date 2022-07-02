@@ -1,10 +1,28 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_remote_control_terminal/controllers/app-controller.dart';
+import 'package:flutter_remote_control_terminal/core/domain/events/app-drawer-event.dart';
+import 'package:flutter_remote_control_terminal/design/curves/show-content-app-curve.dart';
+import 'package:flutter_remote_control_terminal/widgets/app-drawer.dart';
+import 'package:flutter_remote_control_terminal/widgets/fragments/config-fragment.dart';
+import 'package:flutter_remote_control_terminal/widgets/fragments/terminal-fragment.dart';
+import 'package:flutter_remote_control_terminal/widgets/screens/main-screen.dart';
+import 'package:flutter_remote_control_terminal/widgets/screens/splash-screen.dart';
 import 'package:remote_control/remote_control.dart';
 import 'package:flutter_remote_control_terminal/core/helpers/log.dart';
+import 'package:responsive_framework/responsive_framework.dart';
+import 'core/helpers/app-strings.dart';
+import 'design/app-color.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Loads app config and info's
+  await AppController.load();
+  // Loads i18n strings
+  await AppStringsDelegate.load();
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,49 +31,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Remote control terminal',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: AppColor.colorScheme,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  String terminalText = '';
-
-  @override
-  void initState() {
-    log.onChange(() {
-      setState(() {
-        terminalText = log.get();
-      });
-    });
-    RemoteControlCore.start(ServerConfig()).listen((event) {
-      log.info('Remote Control Server Event: ${event.runtimeType}');
-    });
-
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(terminalText),
-          ],
-        ),
+      themeMode: ThemeMode.dark,
+      builder: (context, child) => ResponsiveWrapper.builder(
+        child,
+        defaultScale: true,
+        breakpoints: const [
+          ResponsiveBreakpoint.resize(480, name: MOBILE),
+          ResponsiveBreakpoint.autoScale(800, name: TABLET),
+          ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+        ],
       ),
+      home: MainScreen(),
     );
   }
 }

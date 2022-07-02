@@ -300,6 +300,9 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/remote_control/example/windows/flutter/ephemeral/.plugin_symlinks/remote_control/build" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/remote_control/example/windows/flutter/ephemeral/.plugin_symlinks/remote_control/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/remote_control/example/windows/flutter/ephemeral/.plugin_symlinks/remote_control/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/remote_control/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/remote_control/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/remote_control/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

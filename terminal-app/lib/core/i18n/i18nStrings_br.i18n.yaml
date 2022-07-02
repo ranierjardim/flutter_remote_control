@@ -1,0 +1,10 @@
+button:
+  save: Salvar
+  load: Carregar
+users:
+  welcome(String name): "Olá $name!"
+  logout: Sair
+
+
+generic:
+  version(String versionString): "Versão: $versionString"

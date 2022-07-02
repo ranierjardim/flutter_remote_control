@@ -1,0 +1,6 @@
+
+
+enum AppViewModeEnum {
+  mobile,
+  desktop
+}
