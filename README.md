@@ -1,15 +1,38 @@
-# remote_control
+# flutter_remote_control
 
-A terminal like server to your app
+## Table of contents
 
-## Getting Started
+- [Flutter Remote Control](#flutter_remote_control)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Introduction
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This Flutter package enable remote control for development or user support purposes on your app. You can use it to automate development repetitive tasks, to connect to a costumer device remotely or just made a live action presentation.
 
+## Mode support by OS
+
+| Mode | MacOS | Linux | Windows | Web | Android | iOS |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Server | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: |
+| Client | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+## Modules
+
+### Remote Control Core
+
+> folder ./core/
+
+This module has all connections and
+
+### Flutter Remote Control
+
+> folder . (root folder)
+
+This module has core and Flutter Widgets for Flutter Apps
+
+### Dedicated Server
+
+> folder ./dedicated-server/
+
+This module
