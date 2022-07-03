@@ -52,3 +52,19 @@ This app is a dedicated server to remote user support. You can connect to server
 > :apple: [App Store](https://www.apple.com/br/app-store/)
 
 This app is used to send commands to your app. It can be used standalone(just open the app to setup an debug server) or using a dedicated server.
+
+## Tested devices by architecture
+
+| Device | OS | i386(32 bits) | AMD64(64 bits) | ARM 32 bits | ARM 64 bits |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| - | Windows 11 | :heavy_exclamation_mark: | :white_check_mark: | :o: | :o: |
+| Raspberry Pi 3 | Raspbian 11 | :heavy_exclamation_mark: | :heavy_exclamation_mark: | :ballot_box_with_check: | :white_check_mark: |
+| - | MacOS 12 | :o: | :o: | :o: | :white_check_mark: |
+
+#### Captions
+
+- :white_check_mark: -> Tested and supported
+- :ballot_box_with_check: -> Tested and server only supported
+- :x: -> Tested and not supported
+- :o: -> Not tested
+- :heavy_exclamation_mark: -> Not supported architecture
