@@ -19,20 +19,22 @@ This Flutter package enable remote control for development or user support purpo
 
 ## Modules
 
-### Remote Control Core
+### [Remote Control Core](./core/)
 
 > folder ./core/
 
-This module has all connections and
+This module has all connections and logic to extend to other projects. This module can used by non-Flutter applications.
 
 ### Flutter Remote Control
 
-> folder . (root folder)
+> this folder
 
-This module has core and Flutter Widgets for Flutter Apps
+This module has core and Flutter Widgets for Flutter Apps.
 
 ### Dedicated Server
 
 > folder ./dedicated-server/
 
-This module
+> [Docker Hub Repository](https://hub.docker.com/repository/docker/ranierjardim/flutter_remote_control_dedicated_server)
+
+This module is a dedicated server to remote user support. You can connect terminal to server.
