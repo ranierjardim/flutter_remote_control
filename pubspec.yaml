@@ -1,5 +1,5 @@
-name: remote_control
-description: A terminal like server to your app
+name: flutter_remote_control
+description: A terminal like server to your Flutter App
 version: 0.0.1
 homepage: https://github.com/ranierjardim/flutter_remote_control
 

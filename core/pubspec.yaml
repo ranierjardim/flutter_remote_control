@@ -1,6 +1,6 @@
-name: remote_control_core
-description: A starting point for Dart libraries or applications.
-version: 0.0.1
+name: remote_control
+description: A terminal like server to your Dart App
+version: 0.0.2
 homepage: https://github.com/ranierjardim/flutter_remote_control/core
 
 environment:

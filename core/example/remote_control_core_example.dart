@@ -1,4 +1,4 @@
-import 'package:remote_control_core/remote_control_core.dart';
+import 'package:remote_control/remote_control.dart';
 
 void main() {
 

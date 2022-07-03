@@ -53,7 +53,7 @@ This app is a dedicated server to remote user support. You can connect to server
 
 This app is used to send commands to your app. It can be used standalone(just open the app to setup an debug server) or using a dedicated server.
 
-## Tested devices by architecture
+## Tested devices/OS by architecture
 
 | Device | OS | i386(32 bits) | AMD64(64 bits) | ARM 32 bits | ARM 64 bits |
 | ----- | ----- | ----- | ----- | ----- | ----- |
