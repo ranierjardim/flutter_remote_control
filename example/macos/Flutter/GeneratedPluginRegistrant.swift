@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import remote_control
+import flutter_remote_control
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   RemoteControlPlugin.register(with: registry.registrar(forPlugin: "RemoteControlPlugin"))

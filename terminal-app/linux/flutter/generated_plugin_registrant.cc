@@ -6,10 +6,10 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <remote_control/remote_control_plugin.h>
+#include <flutter_remote_control/remote_control_plugin.h>
 
 void fl_register_plugins(FlPluginRegistry* registry) {
-  g_autoptr(FlPluginRegistrar) remote_control_registrar =
+  g_autoptr(FlPluginRegistrar) flutter_remote_control_registrar =
       fl_plugin_registry_get_registrar_for_plugin(registry, "RemoteControlPlugin");
-  remote_control_plugin_register_with_registrar(remote_control_registrar);
+  remote_control_plugin_register_with_registrar(flutter_remote_control_registrar);
 }

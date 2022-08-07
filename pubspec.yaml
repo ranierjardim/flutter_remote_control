@@ -33,10 +33,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.ranierjardim.remote_control
-        pluginClass: RemoteControlPlugin
+        package: com.ranierjardim.flutter_remote_control
+        pluginClass: FlutterRemoteControlPlugin
       ios:
-        pluginClass: RemoteControlPlugin
+        pluginClass: FlutterRemoteControlPlugin
       linux:
         pluginClass: RemoteControlPlugin
       macos:
@@ -44,7 +44,7 @@ flutter:
       windows:
         pluginClass: RemoteControlPlugin
       web:
-        pluginClass: RemoteControlWeb
+        pluginClass: FlutterRemoteControlWeb
         fileName: remote_control_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:

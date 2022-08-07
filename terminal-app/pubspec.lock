@@ -223,6 +223,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  flutter_remote_control:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -507,19 +514,12 @@ packages:
     source: hosted
     version: "5.2.1"
   remote_control:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
-  remote_control_core:
     dependency: transitive
     description:
       path: "../core"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   responsive_framework:
     dependency: "direct main"
     description:

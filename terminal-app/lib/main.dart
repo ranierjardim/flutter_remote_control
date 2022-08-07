@@ -8,7 +8,7 @@ import 'package:flutter_remote_control_terminal/widgets/fragments/config-fragmen
 import 'package:flutter_remote_control_terminal/widgets/fragments/terminal-fragment.dart';
 import 'package:flutter_remote_control_terminal/widgets/screens/main-screen.dart';
 import 'package:flutter_remote_control_terminal/widgets/screens/splash-screen.dart';
-import 'package:remote_control/remote_control.dart';
+import 'package:flutter_remote_control/flutter_remote_control.dart';
 import 'package:flutter_remote_control_terminal/core/helpers/log.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/helpers/app-strings.dart';

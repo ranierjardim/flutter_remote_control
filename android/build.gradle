@@ -1,4 +1,4 @@
-group 'com.ranierjardim.remote_control'
+group 'com.ranierjardim.flutter_remote_control'
 version '1.0-SNAPSHOT'
 
 buildscript {

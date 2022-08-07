@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         terminalText = log.get();
       });
     });
-    RemoteControlCore.start(RemoteControlServerConfig()).listen((event) {
+    RemoteControl.start(RemoteControlServerConfig()).listen((event) {
       log.info('Remote Control Server Event: ${event.runtimeType}');
     });
     super.initState();

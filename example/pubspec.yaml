@@ -1,4 +1,4 @@
-name: remote_control_example
+name: flutter_remote_control_example
 description: Demonstrates how to use the remote_control plugin.
 
 # The following line prevents the package from being accidentally published to
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  remote_control:
+  flutter_remote_control:
     # When depending on this package from a real application you should use:
     #   remote_control: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

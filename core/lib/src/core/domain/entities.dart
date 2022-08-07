@@ -54,6 +54,13 @@ class RemoteControlClientConfig implements RemoteControlConfig {
   @override
   int port;
 
+  /// Config for run as client
+  ///
+  /// As a client, you can run [clientType] as:
+  /// - [RemoteControlConnectionTypeEnum.remoteControlledClient]
+  ///     - As a remote controlled client, you only receive commands
+  /// - [RemoteControlConnectionTypeEnum.terminal]
+  ///     - As a terminal, you only can send commands
   RemoteControlClientConfig({this.port = remoteControlDefaultPort, this.clientType = RemoteControlConnectionTypeEnum.remoteControlledClient});
 }
 

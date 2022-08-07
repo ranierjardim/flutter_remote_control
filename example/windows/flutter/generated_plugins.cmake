@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  remote_control
+  flutter_remote_control
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
