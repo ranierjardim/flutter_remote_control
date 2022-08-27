@@ -13,7 +13,7 @@
 extern "C" {
 #endif
 
-FLUTTER_PLUGIN_EXPORT void RemoteControlPluginRegisterWithRegistrar(
+FLUTTER_PLUGIN_EXPORT void FlutterRemoteControlPluginRegisterWithRegistrar(
     FlutterDesktopPluginRegistrarRef registrar);
 
 #if defined(__cplusplus)

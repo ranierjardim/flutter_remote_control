@@ -6,9 +6,9 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <flutter_remote_control/remote_control_plugin.h>
+#include <flutter_remote_control/flutter_remote_control_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-  RemoteControlPluginRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("RemoteControlPlugin"));
+  FlutterRemoteControlPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("FlutterRemoteControlPlugin"));
 }

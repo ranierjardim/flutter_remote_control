@@ -1,15 +1,10 @@
-name: remote_control
+name: remote_control_core
 description: A terminal like server to your Dart App
 version: 0.0.2
-homepage: https://github.com/ranierjardim/flutter_remote_control/core
+homepage: https://github.com/ranierjardim/flutter_remote_control/remote_control_core
 
 environment:
   sdk: '>=2.17.1 <3.0.0'
-
-dependencies:
-  web_socket_channel: ^2.2.0
-  get_server: ^1.1.1
-
 
 dev_dependencies:
   lints: ^2.0.0

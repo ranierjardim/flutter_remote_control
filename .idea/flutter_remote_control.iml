@@ -726,10 +726,38 @@
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/build" />
       <excludeFolder url="file://$MODULE_DIR$/example/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control/build" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_server/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_server/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/remote_control_server/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/linux/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/build" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/terminal-app/windows/flutter/ephemeral/.plugin_symlinks/flutter_remote_control/remote_control_server/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
     <orderEntry type="library" name="Flutter Plugins" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>

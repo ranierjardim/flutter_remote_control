@@ -13,7 +13,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   remote_control:
-    path: core
+    path: remote_control
 
 dev_dependencies:
   flutter_test:
@@ -40,9 +40,9 @@ flutter:
       linux:
         pluginClass: RemoteControlPlugin
       macos:
-        pluginClass: RemoteControlPlugin
+        pluginClass: FlutterRemoteControlPlugin
       windows:
-        pluginClass: RemoteControlPlugin
+        pluginClass: FlutterRemoteControlPlugin
       web:
         pluginClass: FlutterRemoteControlWeb
         fileName: flutter_remote_control_web.dart

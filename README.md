@@ -23,17 +23,29 @@ TODO
 
 ## Modules
 
-### [Remote Control Core](./core/)
+### [Remote Control Core](./remote_control_core/)
 
-> folder ./core/
+> folder ./remote_control_core/
 
-This module has all connections and logic to extend to other projects. This module can used by non-Flutter applications.
+This module has all entities, interfaces and core logic to extend to other projects. This module is not designed to import, it's only for other modules internal use.
+
+### [Remote Control Server](./remote_control_server/)
+
+> folder ./remote_control_server/
+
+This module has the server scripts. This module can used by non-Flutter applications.
+
+### [Remote Control](./core/)
+
+> folder ./remote_control/
+
+This module has the client scripts, for a remote controlled device or a terminal. This module can used by non-Flutter applications.
 
 ### Flutter Remote Control
 
 > this folder
 
-This module has core and Flutter Widgets for Flutter Apps.
+This module is a client for Flutter Apps.
 
 ## Applications
 

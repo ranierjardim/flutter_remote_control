@@ -1,4 +1,4 @@
-#include "include/remote_control/remote_control_plugin.h"
+#include "include/flutter_remote_control/flutter_remote_control_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -16,13 +16,13 @@
 
 namespace {
 
-class RemoteControlPlugin : public flutter::Plugin {
+class FlutterRemoteControlPlugin : public flutter::Plugin {
  public:
   static void RegisterWithRegistrar(flutter::PluginRegistrarWindows *registrar);
 
-  RemoteControlPlugin();
+  FlutterRemoteControlPlugin();
 
-  virtual ~RemoteControlPlugin();
+  virtual ~FlutterRemoteControlPlugin();
 
  private:
   // Called when a method is called on this plugin's channel from Dart.
@@ -32,14 +32,14 @@ class RemoteControlPlugin : public flutter::Plugin {
 };
 
 // static
-void RemoteControlPlugin::RegisterWithRegistrar(
+void FlutterRemoteControlPlugin::RegisterWithRegistrar(
     flutter::PluginRegistrarWindows *registrar) {
   auto channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          registrar->messenger(), "remote_control",
+          registrar->messenger(), "flutter_remote_control",
           &flutter::StandardMethodCodec::GetInstance());
 
-  auto plugin = std::make_unique<RemoteControlPlugin>();
+  auto plugin = std::make_unique<FlutterRemoteControlPlugin>();
 
   channel->SetMethodCallHandler(
       [plugin_pointer = plugin.get()](const auto &call, auto result) {
@@ -49,11 +49,11 @@ void RemoteControlPlugin::RegisterWithRegistrar(
   registrar->AddPlugin(std::move(plugin));
 }
 
-RemoteControlPlugin::RemoteControlPlugin() {}
+FlutterRemoteControlPlugin::FlutterRemoteControlPlugin() {}
 
-RemoteControlPlugin::~RemoteControlPlugin() {}
+FlutterRemoteControlPlugin::~FlutterRemoteControlPlugin() {}
 
-void RemoteControlPlugin::HandleMethodCall(
+void FlutterRemoteControlPlugin::HandleMethodCall(
     const flutter::MethodCall<flutter::EncodableValue> &method_call,
     std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>> result) {
   if (method_call.method_name().compare("getPlatformVersion") == 0) {
@@ -74,9 +74,9 @@ void RemoteControlPlugin::HandleMethodCall(
 
 }  // namespace
 
-void RemoteControlPluginRegisterWithRegistrar(
+void FlutterRemoteControlPluginRegisterWithRegistrar(
     FlutterDesktopPluginRegistrarRef registrar) {
-  RemoteControlPlugin::RegisterWithRegistrar(
+  FlutterRemoteControlPlugin::RegisterWithRegistrar(
       flutter::PluginRegistrarManager::GetInstance()
           ->GetRegistrar<flutter::PluginRegistrarWindows>(registrar));
 }

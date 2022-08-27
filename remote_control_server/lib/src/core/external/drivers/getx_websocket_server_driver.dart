@@ -1,6 +1,5 @@
 
-import '../../domain/entities.dart';
-import '../../infra/drivers/websocket_driver.dart';
+import 'package:remote_control_core/remote_control_core.dart';
 import 'package:get_server/get_server.dart' as gs;
 
 

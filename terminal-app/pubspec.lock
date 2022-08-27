@@ -29,13 +29,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
-  auth_header:
-    dependency: transitive
-    description:
-      name: auth_header
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.1"
   bloc:
     dependency: transitive
     description:
@@ -254,13 +247,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.2.0"
-  get_server:
-    dependency: transitive
-    description:
-      name: get_server
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.1"
   glob:
     dependency: transitive
     description:
@@ -310,13 +296,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  jaguar_jwt:
-    dependency: transitive
-    description:
-      name: jaguar_jwt
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.0"
   js:
     dependency: transitive
     description:
@@ -516,7 +495,14 @@ packages:
   remote_control:
     dependency: transitive
     description:
-      path: "../core"
+      path: "../remote_control"
+      relative: true
+    source: path
+    version: "0.0.2"
+  remote_control_core:
+    dependency: transitive
+    description:
+      path: "../remote_control_core"
       relative: true
     source: path
     version: "0.0.2"

@@ -1,10 +1,10 @@
 import Cocoa
 import FlutterMacOS
 
-public class RemoteControlPlugin: NSObject, FlutterPlugin {
+public class FlutterRemoteControlPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "flutter_remote_control", binaryMessenger: registrar.messenger)
-    let instance = RemoteControlPlugin()
+    let instance = FlutterRemoteControlPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

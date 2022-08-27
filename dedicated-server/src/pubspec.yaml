@@ -8,8 +8,8 @@ environment:
   sdk: '>=2.17.1 <3.0.0'
 
 dependencies:
-  remote_control:
-    path: ../../core
+  remote_control_server:
+    path: ../../remote_control_server
 
 dev_dependencies:
   lints: ^2.0.0

@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.14)
-set(PROJECT_NAME "remote_control")
+set(PROJECT_NAME "flutter_remote_control")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
 # This value is used when generating builds using this plugin, so it must
 # not be changed
-set(PLUGIN_NAME "remote_control_plugin")
+set(PLUGIN_NAME "flutter_remote_control_plugin")
 
 add_library(${PLUGIN_NAME} SHARED
-  "remote_control_plugin.cpp"
+  "flutter_remote_control_plugin.cpp"
 )
 apply_standard_settings(${PLUGIN_NAME})
 set_target_properties(${PLUGIN_NAME} PROPERTIES
@@ -18,7 +18,7 @@ target_include_directories(${PLUGIN_NAME} INTERFACE
 target_link_libraries(${PLUGIN_NAME} PRIVATE flutter flutter_wrapper_plugin)
 
 # List of absolute paths to libraries that should be bundled with the plugin
-set(remote_control_bundled_libraries
+set(flutter_remote_control_bundled_libraries
   ""
   PARENT_SCOPE
 )
