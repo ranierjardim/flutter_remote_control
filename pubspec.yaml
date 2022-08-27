@@ -45,7 +45,7 @@ flutter:
         pluginClass: RemoteControlPlugin
       web:
         pluginClass: FlutterRemoteControlWeb
-        fileName: remote_control_web.dart
+        fileName: flutter_remote_control_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
