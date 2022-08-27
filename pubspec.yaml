@@ -38,7 +38,7 @@ flutter:
       ios:
         pluginClass: FlutterRemoteControlPlugin
       linux:
-        pluginClass: RemoteControlPlugin
+        pluginClass: FlutterRemoteControlPlugin
       macos:
         pluginClass: FlutterRemoteControlPlugin
       windows:
