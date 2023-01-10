@@ -7,3 +7,24 @@ class AppConfig {
 
   bool get drawerEnabled => false;
 }
+
+
+abstract class PrimeiraClasse {
+
+}
+
+mixin MixinClasse {
+
+}
+
+class SegundaClasse implements PrimeiraClasse {
+
+}
+
+class TerceiraClasse extends SegundaClasse with MixinClasse {
+
+}
+
+class QuartaClasse extends TerceiraClasse {
+  
+}

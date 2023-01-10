@@ -10,8 +10,10 @@ class ConfigFragment extends StatefulWidget {
 }
 
 class _ConfigFragmentState extends State<ConfigFragment> {
+
   @override
   Widget build(BuildContext context) {
+
     return Container(color: Colors.white, child: Text('taporra', style: TextStyle(fontSize: 30),),);
   }
 }
